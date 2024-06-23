@@ -25,7 +25,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aws-java-sdk.version>2.15.69</aws-java-sdk.version>
+        <aws-java-sdk.version>2.25.64</aws-java-sdk.version>
         <json.version>20200518</json.version>
         <commons-configuration2.version>2.7</commons-configuration2.version>
         <httpcomponents-httpclient.version>4.5.13</httpcomponents-httpclient.version>
@@ -198,10 +198,8 @@
                         </goals>
                         <configuration>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.okta.tools.WithOkta</mainClass>
                                 </transformer>
                             </transformers>
